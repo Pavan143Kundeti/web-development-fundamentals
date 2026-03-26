@@ -45,6 +45,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **22_iterators_and_generators.md** - Iterators and Generators: iterable protocol, Symbol.iterator, custom iterators, generator functions, yield keyword, iterator helpers (ES2025), practical examples
 - **23_asynchronous_javascript.md** - Asynchronous JavaScript: callbacks, promises, async/await, fetch API, error handling, sequential vs parallel execution, debugging async code
 - **24_ajax_and_xmlhttprequest.md** - AJAX and XMLHttpRequest: asynchronous requests, GET/POST methods, handling responses, status codes, XML/JSON data, modern Fetch API alternative
+- **25_error_handling.md** - Error Handling: try...catch...finally, error types (ReferenceError, TypeError, RangeError, URIError, SyntaxError), throw statement, custom errors, silent errors, best practices
 
 ## 🎯 Learning Objectives
 
