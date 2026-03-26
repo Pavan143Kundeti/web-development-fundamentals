@@ -26,6 +26,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **03_compilation_vs_interpretation_setup.md** - Compilation vs Interpretation, Node.js setup, Script mode vs Interactive mode
 - **04_data_types_introduction.md** - Understanding data types: what they are, why we need them, JavaScript's 7 primitive types
 - **05_data_types_practical_guide.md** - Hands-on guide to using data types: Number, BigInt, String, Boolean, Undefined with examples
+- **06_type_conversion_type_casting.md** - Type conversion: String(), Number(), parseInt(), Boolean(), truthy/falsy values
 
 ### JavaScript Folder  
 *Coming soon - JavaScript programming and interactivity*
