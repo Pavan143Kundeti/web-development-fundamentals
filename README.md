@@ -28,9 +28,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **05_data_types_practical_guide.md** - Hands-on guide to using data types: Number, BigInt, String, Boolean, Undefined with examples
 - **06_type_conversion_type_casting.md** - Type conversion: String(), Number(), parseInt(), Boolean(), truthy/falsy values
 - **07_comparison_operators.md** - Comparison operators: == vs ===, type coercion, comparing different types, special cases
-
-### JavaScript Folder  
-*Coming soon - JavaScript programming and interactivity*
+- **08_conditional_statements_if_else.md** - Conditional statements: if, if-else, if-else-if-else with real-world examples and flow control
 
 ## 🎯 Learning Objectives
 
