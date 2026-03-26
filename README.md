@@ -33,6 +33,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **10_loops_introduction_for_while_dowhile.md** - Complete guide to loops: for, while, do-while with step-by-step execution and real-world examples
 - **11_strings_complete_guide.md** - Complete strings guide: creating strings, template literals, escape characters, string methods (slice, replace, split, trim, search)
 - **12_numbers_and_bigint.md** - Numbers and BigInt: precision, NaN, Infinity, number methods, BigInt for large integers, conversions
+- **13_functions_complete_guide.md** - Functions complete guide: creating functions, parameters, return values, function expressions, arrow functions, hoisting
 
 ## 🎯 Learning Objectives
 
