@@ -31,6 +31,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **08_conditional_statements_if_else.md** - Conditional statements: if, if-else, if-else-if-else with real-world examples and flow control
 - **09_switch_ternary_logical_operators.md** - Switch statement, ternary operator, logical operators (AND, OR, NOT) with practical examples
 - **10_loops_introduction_for_while_dowhile.md** - Complete guide to loops: for, while, do-while with step-by-step execution and real-world examples
+- **11_strings_complete_guide.md** - Complete strings guide: creating strings, template literals, escape characters, string methods (slice, replace, split, trim, search)
 
 ## 🎯 Learning Objectives
 
