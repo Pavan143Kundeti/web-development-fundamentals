@@ -63,6 +63,9 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 #### Phase 4: Interactivity
 - **04_interactivity_complete_guide.md** - React events (onClick, onChange, onMouseOver), event handlers, passing arguments, event object, React Hooks introduction, useState Hook, initializing state, reading state, updating state, multiple states, state with objects/arrays, spread operator
 
+#### Phase 5: Rendering Data
+- **05_rendering_data_complete_guide.md** - Conditional rendering (if statement, && operator, ternary operator), rendering lists with map(), keys in lists, unique IDs vs array index, filtering lists, empty lists, nested lists, combining conditionals and lists
+
 ## 🎯 Learning Objectives
 
 By completing this course, you will:
