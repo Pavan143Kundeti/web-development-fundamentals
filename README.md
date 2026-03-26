@@ -40,6 +40,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **17_dom_document_object_model.md** - DOM (Document Object Model): selecting elements, changing content/styles, creating/removing elements, event handling, practical examples
 - **18_events_complete_guide.md** - Events complete guide: mouse events, keyboard events, form events, load events, timing events, event object, bubbling/capturing, practical examples
 - **19_destructuring_complete_guide.md** - Destructuring complete guide: object destructuring, array destructuring, default values, aliases, rest operator, nested destructuring, swapping variables
+- **20_sets_and_weaksets.md** - Sets and WeakSets: creating sets, add/delete/has methods, iterating sets, removing duplicates, WeakSet for object tracking, garbage collection
 
 ## 🎯 Learning Objectives
 
