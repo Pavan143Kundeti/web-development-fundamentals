@@ -38,6 +38,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **15_scope_hoisting_strict_mode.md** - Scope (global, function, block), hoisting, strict mode, best practices for variable declaration
 - **16_arrays_complete_guide.md** - Arrays complete guide: creating arrays, accessing elements, array methods (push, pop, shift, unshift, slice, splice), looping, sorting
 - **17_dom_document_object_model.md** - DOM (Document Object Model): selecting elements, changing content/styles, creating/removing elements, event handling, practical examples
+- **18_events_complete_guide.md** - Events complete guide: mouse events, keyboard events, form events, load events, timing events, event object, bubbling/capturing, practical examples
 
 ## 🎯 Learning Objectives
 
