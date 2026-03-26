@@ -42,6 +42,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **19_destructuring_complete_guide.md** - Destructuring complete guide: object destructuring, array destructuring, default values, aliases, rest operator, nested destructuring, swapping variables
 - **20_sets_and_weaksets.md** - Sets and WeakSets: creating sets, add/delete/has methods, iterating sets, removing duplicates, WeakSet for object tracking, garbage collection
 - **21_maps_and_weakmaps.md** - Maps and WeakMaps: key-value pairs, any key type, Map methods (set, get, has, delete), objects as keys, WeakMap for private data, garbage collection
+- **22_iterators_and_generators.md** - Iterators and Generators: iterable protocol, Symbol.iterator, custom iterators, generator functions, yield keyword, iterator helpers (ES2025), practical examples
 
 ## 🎯 Learning Objectives
 
