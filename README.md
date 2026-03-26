@@ -20,6 +20,9 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **03_css_box_model_complete_guide.md** - Complete guide to CSS Box Model: content, padding, border, margin, and box-sizing
 - **04_css_positioning_units_guide.md** - Complete guide to CSS units (px, %, em, rem, vw, vh) and positioning (static, relative, absolute, fixed, sticky)
 
+### JavaScript Folder
+- **01_javascript_introduction_why_javascript.md** - Introduction to JavaScript: why it's needed, how it works, and your first JavaScript code
+
 ### JavaScript Folder  
 *Coming soon - JavaScript programming and interactivity*
 
