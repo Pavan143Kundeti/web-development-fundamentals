@@ -12,6 +12,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **05_html_entities_special_characters.md** - HTML entities for special characters, symbols, and reserved characters
 - **06_links_images_block_inline_elements.md** - Anchor tags, images, block vs inline elements, div and span
 - **07_html_forms_complete_guide.md** - Complete HTML forms guide with all input types, validation, and examples
+- **08_multimedia_audio_video_iframe.md** - HTML5 multimedia: audio, video, details/summary, and iframe embedding
 
 ### CSS Folder
 *Coming soon - CSS styling and layout fundamentals*
