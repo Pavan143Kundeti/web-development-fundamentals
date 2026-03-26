@@ -23,6 +23,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 ### JavaScript Folder
 - **01_javascript_introduction_why_javascript.md** - Introduction to JavaScript: why it's needed, how it works, and your first JavaScript code
 - **02_how_computers_understand_code.md** - How computers work: microprocessors, binary, machine/assembly/high-level languages, compilers
+- **03_compilation_vs_interpretation_setup.md** - Compilation vs Interpretation, Node.js setup, Script mode vs Interactive mode
 
 ### JavaScript Folder  
 *Coming soon - JavaScript programming and interactivity*
