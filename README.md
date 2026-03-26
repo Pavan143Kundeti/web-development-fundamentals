@@ -44,6 +44,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **21_maps_and_weakmaps.md** - Maps and WeakMaps: key-value pairs, any key type, Map methods (set, get, has, delete), objects as keys, WeakMap for private data, garbage collection
 - **22_iterators_and_generators.md** - Iterators and Generators: iterable protocol, Symbol.iterator, custom iterators, generator functions, yield keyword, iterator helpers (ES2025), practical examples
 - **23_asynchronous_javascript.md** - Asynchronous JavaScript: callbacks, promises, async/await, fetch API, error handling, sequential vs parallel execution, debugging async code
+- **24_ajax_and_xmlhttprequest.md** - AJAX and XMLHttpRequest: asynchronous requests, GET/POST methods, handling responses, status codes, XML/JSON data, modern Fetch API alternative
 
 ## 🎯 Learning Objectives
 
