@@ -15,7 +15,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **08_multimedia_audio_video_iframe.md** - HTML5 multimedia: audio, video, details/summary, and iframe embedding
 
 ### CSS Folder
-*Coming soon - CSS styling and layout fundamentals*
+- **01_css_introduction_three_ways.md** - Introduction to CSS and three ways to apply styles (inline, internal, external)
 
 ### JavaScript Folder  
 *Coming soon - JavaScript programming and interactivity*
