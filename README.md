@@ -36,6 +36,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **13_functions_complete_guide.md** - Functions complete guide: creating functions, parameters, return values, function expressions, arrow functions, hoisting
 - **14_objects_complete_guide.md** - Objects complete guide: properties, methods, this keyword, nested objects, constructors, object manipulation
 - **15_scope_hoisting_strict_mode.md** - Scope (global, function, block), hoisting, strict mode, best practices for variable declaration
+- **16_arrays_complete_guide.md** - Arrays complete guide: creating arrays, accessing elements, array methods (push, pop, shift, unshift, slice, splice), looping, sorting
 
 ## 🎯 Learning Objectives
 
