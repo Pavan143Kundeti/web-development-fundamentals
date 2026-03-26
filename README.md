@@ -41,6 +41,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **18_events_complete_guide.md** - Events complete guide: mouse events, keyboard events, form events, load events, timing events, event object, bubbling/capturing, practical examples
 - **19_destructuring_complete_guide.md** - Destructuring complete guide: object destructuring, array destructuring, default values, aliases, rest operator, nested destructuring, swapping variables
 - **20_sets_and_weaksets.md** - Sets and WeakSets: creating sets, add/delete/has methods, iterating sets, removing duplicates, WeakSet for object tracking, garbage collection
+- **21_maps_and_weakmaps.md** - Maps and WeakMaps: key-value pairs, any key type, Map methods (set, get, has, delete), objects as keys, WeakMap for private data, garbage collection
 
 ## 🎯 Learning Objectives
 
