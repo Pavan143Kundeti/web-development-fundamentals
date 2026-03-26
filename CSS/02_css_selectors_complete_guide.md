@@ -520,7 +520,9 @@ p:last-child {
 
 ### :nth-child(n)
 
-Selects specific child by number.
+Selects specific child by number or formula.
+
+#### Basic Usage
 
 ```css
 /* Second child */
@@ -528,21 +530,596 @@ li:nth-child(2) {
     color: blue;
 }
 
-/* Even children */
+/* Third child */
+p:nth-child(3) {
+    background-color: yellow;
+}
+```
+
+#### Keywords
+
+```css
+/* Even children (2, 4, 6, 8...) */
 li:nth-child(even) {
     background-color: lightgray;
 }
 
-/* Odd children */
+/* Odd children (1, 3, 5, 7...) */
 li:nth-child(odd) {
     background-color: white;
 }
+```
 
-/* Every 3rd child */
+#### Formula: an + b
+
+The formula `an + b` where:
+- **a** = multiplier (coefficient)
+- **n** = counter (0, 1, 2, 3, 4...)
+- **b** = offset (starting point)
+
+```css
+/* Every 3rd child: 3n (3, 6, 9, 12...) */
 li:nth-child(3n) {
     color: red;
 }
+
+/* Every 3rd child starting from 2nd: 3n+2 (2, 5, 8, 11...) */
+p:nth-child(3n+2) {
+    background-color: lightblue;
+}
+
+/* Every 2nd child starting from 1st: 2n+1 (same as odd) */
+li:nth-child(2n+1) {
+    font-weight: bold;
+}
 ```
+
+#### How Formula Works
+
+When `n = 0, 1, 2, 3...`
+
+```css
+/* 3n + 0 */
+/* n=0: 0, n=1: 3, n=2: 6, n=3: 9 */
+li:nth-child(3n) { }
+
+/* 3n + 2 */
+/* n=0: 2, n=1: 5, n=2: 8, n=3: 11 */
+li:nth-child(3n+2) { }
+
+/* 2n (even numbers) */
+/* n=0: 0, n=1: 2, n=2: 4, n=3: 6 */
+li:nth-child(2n) { }
+```
+
+#### Complete Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Every 3rd paragraph */
+        p:nth-child(3n) {
+            background-color: yellow;
+        }
+        
+        /* 2nd, 5th, 8th paragraphs (3n+2) */
+        p:nth-child(3n+2) {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2 (blue - 3n+2)</p>
+        <p>Paragraph 3 (yellow - 3n)</p>
+        <p>Paragraph 4</p>
+        <p>Paragraph 5 (blue - 3n+2)</p>
+        <p>Paragraph 6 (yellow - 3n)</p>
+    </div>
+</body>
+</html>
+```
+
+### :nth-last-child(n)
+
+Selects specific child counting from the end (last to first).
+
+#### Basic Usage
+
+```css
+/* Second child from end */
+li:nth-last-child(2) {
+    color: blue;
+}
+
+/* Last 3 children */
+li:nth-last-child(-n+3) {
+    font-weight: bold;
+}
+```
+
+#### Formula: an + b (counting backwards)
+
+```css
+/* Every 2nd child from end */
+li:nth-last-child(2n) {
+    background-color: lightgray;
+}
+
+/* 3rd, 6th, 9th from end */
+li:nth-last-child(3n) {
+    color: red;
+}
+```
+
+#### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Last 3 items */
+        li:nth-last-child(-n+3) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3 (yellow - 3rd from end)</li>
+        <li>Item 4 (yellow - 2nd from end)</li>
+        <li>Item 5 (yellow - last)</li>
+    </ul>
+</body>
+</html>
+```
+
+---
+
+## Understanding :child vs :of-type Selectors
+
+### Important Difference
+
+- **:child** selectors count ALL children (any tag type)
+- **:of-type** selectors count only children of SAME tag type
+
+---
+
+### :first-child vs :first-of-type
+
+#### :first-child
+
+Selects element ONLY if it's the first child of parent.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p:first-child {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Heading</h2>
+        <p>This is NOT red (not first child)</p>
+        <p>Paragraph 2</p>
+    </div>
+    
+    <div>
+        <p>This IS red (first child)</p>
+        <p>Paragraph 2</p>
+    </div>
+</body>
+</html>
+```
+
+#### :first-of-type
+
+Selects first element of that type, regardless of position.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p:first-of-type {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Heading</h2>
+        <p>This IS blue (first p tag)</p>
+        <p>Paragraph 2</p>
+    </div>
+    
+    <div>
+        <p>This IS blue (first p tag)</p>
+        <p>Paragraph 2</p>
+    </div>
+</body>
+</html>
+```
+
+**Key Point:** `:first-of-type` ignores other tag types!
+
+---
+
+### :last-child vs :last-of-type
+
+#### :last-child
+
+Selects element ONLY if it's the last child of parent.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p:last-child {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Paragraph 1</p>
+        <p>This IS red (last child)</p>
+    </div>
+    
+    <div>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <span>This is span</span>
+        <!-- p is NOT last child, so NOT red -->
+    </div>
+</body>
+</html>
+```
+
+#### :last-of-type
+
+Selects last element of that type, regardless of position.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p:last-of-type {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Paragraph 1</p>
+        <p>This IS blue (last p tag)</p>
+    </div>
+    
+    <div>
+        <p>Paragraph 1</p>
+        <p>This IS blue (last p tag)</p>
+        <span>This is span</span>
+        <!-- p is still blue (last p type) -->
+    </div>
+</body>
+</html>
+```
+
+---
+
+### :nth-of-type(n)
+
+Selects specific element of same type using number or formula.
+
+#### Basic Usage
+
+```css
+/* Second paragraph (ignores other tags) */
+p:nth-of-type(2) {
+    color: blue;
+}
+
+/* Third div */
+div:nth-of-type(3) {
+    background-color: yellow;
+}
+```
+
+#### Formula: an + b
+
+```css
+/* Every 2nd paragraph */
+p:nth-of-type(2n) {
+    background-color: lightgray;
+}
+
+/* Every 3rd list item */
+li:nth-of-type(3n) {
+    color: red;
+}
+
+/* 2nd, 5th, 8th paragraphs */
+p:nth-of-type(3n+2) {
+    font-weight: bold;
+}
+```
+
+#### Complete Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Every 2nd paragraph */
+        p:nth-of-type(2n) {
+            background-color: lightblue;
+        }
+        
+        /* Every 2nd div */
+        div:nth-of-type(2n) {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Section 1</h2>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2 (blue - 2nd p)</p>
+        <span>Some text</span>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4 (blue - 4th p)</p>
+    </div>
+</body>
+</html>
+```
+
+---
+
+### :nth-last-of-type(n)
+
+Selects specific element of same type counting from end.
+
+#### Examples
+
+```css
+/* 2nd paragraph from end */
+p:nth-last-of-type(2) {
+    color: red;
+}
+
+/* Every 2nd paragraph from end */
+p:nth-last-of-type(2n) {
+    background-color: yellow;
+}
+
+/* Last 3 paragraphs */
+p:nth-last-of-type(-n+3) {
+    font-weight: bold;
+}
+```
+
+#### Complete Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Last 2 paragraphs */
+        p:nth-last-of-type(-n+2) {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <h2>Heading</h2>
+        <p>Paragraph 3 (green - 2nd from end)</p>
+        <span>Text</span>
+        <p>Paragraph 4 (green - last p)</p>
+    </div>
+</body>
+</html>
+```
+
+---
+
+### :only-child
+
+Selects element ONLY if it's the only child of parent.
+
+#### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p:only-child {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This IS red (only child)</p>
+    </div>
+    
+    <div>
+        <p>This is NOT red</p>
+        <p>Multiple children</p>
+    </div>
+    
+    <div>
+        <h2>Heading</h2>
+        <p>This is NOT red (has sibling)</p>
+    </div>
+</body>
+</html>
+```
+
+**Use case:** Style elements that appear alone in containers
+
+---
+
+### :only-of-type
+
+Selects element if it's the only one of its type among siblings.
+
+#### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p:only-of-type {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This IS blue (only p tag)</p>
+    </div>
+    
+    <div>
+        <h2>Heading</h2>
+        <p>This IS blue (only p tag, heading doesn't count)</p>
+        <span>Text</span>
+    </div>
+    
+    <div>
+        <p>This is NOT blue</p>
+        <p>Multiple p tags</p>
+    </div>
+</body>
+</html>
+```
+
+**Key Point:** Other tag types don't matter, only counts same type!
+
+---
+
+## Comparison Table: :child vs :of-type
+
+| Selector | Counts | Example Use |
+|----------|--------|-------------|
+| `:first-child` | All children | Must be first child |
+| `:first-of-type` | Same type only | First of its type |
+| `:last-child` | All children | Must be last child |
+| `:last-of-type` | Same type only | Last of its type |
+| `:nth-child(n)` | All children | Position among all |
+| `:nth-of-type(n)` | Same type only | Position among same type |
+| `:only-child` | All children | No siblings at all |
+| `:only-of-type` | Same type only | No siblings of same type |
+
+---
+
+## Practical List Examples
+
+### Example 1: Styling List Items
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* First item */
+        li:first-child {
+            font-weight: bold;
+            color: green;
+        }
+        
+        /* Last item */
+        li:last-child {
+            font-weight: bold;
+            color: red;
+        }
+        
+        /* Even items */
+        li:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+        
+        /* Every 3rd item */
+        li:nth-child(3n) {
+            border-left: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1 (green, bold)</li>
+        <li>Item 2 (gray background)</li>
+        <li>Item 3 (blue border, 3n)</li>
+        <li>Item 4 (gray background)</li>
+        <li>Item 5</li>
+        <li>Item 6 (gray background, blue border, 3n)</li>
+        <li>Item 7</li>
+        <li>Item 8 (gray background)</li>
+        <li>Item 9 (blue border, 3n, red, bold)</li>
+    </ul>
+</body>
+</html>
+```
+
+### Example 2: Mixed Content Styling
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* First paragraph (any position) */
+        p:first-of-type {
+            font-size: 20px;
+            color: blue;
+        }
+        
+        /* Every 2nd paragraph */
+        p:nth-of-type(2n) {
+            background-color: lightyellow;
+        }
+        
+        /* Last paragraph */
+        p:last-of-type {
+            border-bottom: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Article Title</h2>
+        <p>First paragraph (blue, large)</p>
+        <p>Second paragraph (yellow background)</p>
+        <img src="image.jpg" alt="Image">
+        <p>Third paragraph</p>
+        <p>Fourth paragraph (yellow background, green border)</p>
+    </div>
+</body>
+</html>
+```
+
+---
 
 ### Complete Example
 
@@ -1211,6 +1788,13 @@ p {
 | **:hover** | `:hover` | `a:hover { }` | Mouse over |
 | **:focus** | `:focus` | `input:focus { }` | Element focused |
 | **:nth-child** | `:nth-child(n)` | `li:nth-child(2) { }` | Specific position |
+| **:nth-last-child** | `:nth-last-child(n)` | `li:nth-last-child(2) { }` | Position from end |
+| **:first-of-type** | `:first-of-type` | `p:first-of-type { }` | First of same type |
+| **:last-of-type** | `:last-of-type` | `p:last-of-type { }` | Last of same type |
+| **:nth-of-type** | `:nth-of-type(n)` | `p:nth-of-type(2) { }` | Position of same type |
+| **:nth-last-of-type** | `:nth-last-of-type(n)` | `p:nth-last-of-type(2) { }` | Position from end (same type) |
+| **:only-child** | `:only-child` | `p:only-child { }` | Only child of parent |
+| **:only-of-type** | `:only-of-type` | `p:only-of-type { }` | Only one of its type |
 | **::before** | `::before` | `h2::before { }` | Insert before |
 | **::after** | `::after` | `h2::after { }` | Insert after |
 | **::first-letter** | `::first-letter` | `p::first-letter { }` | First letter |
