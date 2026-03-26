@@ -7,6 +7,8 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 ### HTML Folder
 - **01_web_development_introduction.md** - Complete introduction to web development concepts
 - **02_html_fundamentals_basics.md** - HTML basics, document structure, and essential tags
+- **03_html_lists_complete_guide.md** - Complete guide to HTML lists (unordered, ordered, description)
+- **04_html_tables_complete_guide.md** - Complete guide to HTML tables with colspan, rowspan, and styling
 
 ### CSS Folder
 *Coming soon - CSS styling and layout fundamentals*
