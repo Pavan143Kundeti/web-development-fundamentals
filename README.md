@@ -49,6 +49,17 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **25_error_handling.md** - Error Handling: try...catch...finally, error types (ReferenceError, TypeError, RangeError, URIError, SyntaxError), throw statement, custom errors, silent errors, best practices
 - **26_debugging_complete_guide.md** - Debugging: console methods, reading error messages, breakpoints, debugger keyword, stepping through code, watch variables, scope panel, debugging async code, best practices
 
+### React Folder
+
+#### Phase 1: Basics
+- **01_react_basics_complete.md** - React introduction, Virtual DOM, getting started with Vite, creating first React app, rendering HTML, root node
+
+#### Phase 2: JSX
+- **02_jsx_complete_guide.md** - JSX introduction, expressions, multiple lines, one top level element, closing tags, className, comments, JSX in components, attributes, style, conditional rendering
+
+#### Phase 3: Components
+- **03_components_complete_guide.md** - Creating components, rendering components, components in components, props, multiple props, different data types, object/array props, props destructuring, rest operator, default values, props children
+
 ## 🎯 Learning Objectives
 
 By completing this course, you will:
