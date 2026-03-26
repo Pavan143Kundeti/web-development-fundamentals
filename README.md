@@ -24,7 +24,8 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **01_javascript_introduction_why_javascript.md** - Introduction to JavaScript: why it's needed, how it works, and your first JavaScript code
 - **02_how_computers_understand_code.md** - How computers work: microprocessors, binary, machine/assembly/high-level languages, compilers
 - **03_compilation_vs_interpretation_setup.md** - Compilation vs Interpretation, Node.js setup, Script mode vs Interactive mode
-- **04_data_types_introduction.md** - Understanding data types: what they are, why we need them, JavaScript's 7 primitive types
+- **04_variables_let_const_var.md** - Variables: declaring with let, const, var, naming rules, block scope, function scope, hoisting, const with arrays/objects
+- **04_data_types_introduction_part2.md** - Understanding data types: what they are, why we need them, JavaScript's 7 primitive types
 - **05_data_types_practical_guide.md** - Hands-on guide to using data types: Number, BigInt, String, Boolean, Undefined with examples
 - **06_type_conversion_type_casting.md** - Type conversion: String(), Number(), parseInt(), Boolean(), truthy/falsy values
 - **07_comparison_operators.md** - Comparison operators: == vs ===, type coercion, comparing different types, special cases
