@@ -69,6 +69,12 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 #### Phase 6: Forms
 - **06_forms_complete_guide.md** - Forms in React, controlled components, useState for forms, handling form submission, e.preventDefault(), multiple input fields with single state object, bracket notation, initial values, different input types (text, email, password, textarea, select, checkbox, radio), form validation, reset forms
 
+#### Phase 7: Side Effects
+- **07_side_effects_complete_guide.md** - useEffect Hook, side effects (fetching data, timers, DOM updates), dependency array (no deps, empty array, with dependencies), effect cleanup, clearing timers and intervals, event listeners, fetching data, async/await in useEffect, document title updates, common patterns and best practices
+
+#### Phase 8: Routing
+- **08_routing_complete_guide.md** - React Router introduction, installation, BrowserRouter setup, basic routing (Link, Routes, Route), creating views, nested routes, Outlet component, NavLink for active styling, URL parameters, useParams hook, multiple parameters, common routing patterns
+
 ## 🎯 Learning Objectives
 
 By completing this course, you will:
