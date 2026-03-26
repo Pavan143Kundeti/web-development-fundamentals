@@ -60,6 +60,9 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 #### Phase 3: Components
 - **03_components_complete_guide.md** - Creating components, rendering components, components in components, props, multiple props, different data types, object/array props, props destructuring, rest operator, default values, props children
 
+#### Phase 4: Interactivity
+- **04_interactivity_complete_guide.md** - React events (onClick, onChange, onMouseOver), event handlers, passing arguments, event object, React Hooks introduction, useState Hook, initializing state, reading state, updating state, multiple states, state with objects/arrays, spread operator
+
 ## 🎯 Learning Objectives
 
 By completing this course, you will:
