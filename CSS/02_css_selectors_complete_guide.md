@@ -1019,6 +1019,333 @@ Selects element if it's the only one of its type among siblings.
 
 ---
 
+### :not() - Negation Pseudo-Class
+
+Selects elements that do NOT match the selector inside parentheses.
+
+#### Syntax
+
+```css
+element:not(selector) {
+    property: value;
+}
+```
+
+#### Examples
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* All paragraphs except those with class "first" */
+        p:not(.first) {
+            background-color: yellow;
+        }
+        
+        /* All list items except first child */
+        li:not(:first-child) {
+            color: gray;
+        }
+        
+        /* All inputs except text type */
+        input:not([type="text"]) {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <p class="first">Not yellow (has class "first")</p>
+    <p class="second">Yellow background</p>
+    <p class="third">Yellow background</p>
+    
+    <ul>
+        <li>Black (first child)</li>
+        <li>Gray</li>
+        <li>Gray</li>
+    </ul>
+    
+    <input type="text" placeholder="No red border">
+    <input type="email" placeholder="Red border">
+    <input type="password" placeholder="Red border">
+</body>
+</html>
+```
+
+#### Practical Use Cases
+
+```css
+/* Style all paragraphs except those with specific class */
+p:not(.highlight) {
+    color: gray;
+}
+
+/* All links except external links */
+a:not([href^="http"]) {
+    color: blue;
+}
+
+/* All divs except the main content */
+div:not(#main-content) {
+    padding: 10px;
+}
+
+/* All buttons except disabled ones */
+button:not(:disabled) {
+    cursor: pointer;
+}
+```
+
+---
+
+### Example 2: First-child vs First-of-type with Lists
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Using :first-child */
+        .demo1 li:first-child {
+            background-color: yellow;
+        }
+        
+        /* Using :first-of-type */
+        .demo2 li:first-of-type {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h3>Using :first-child</h3>
+    <ul class="demo1">
+        <li>Yellow (first child)</li>
+        <li>Normal</li>
+        <li>Normal</li>
+    </ul>
+    
+    <ul class="demo1">
+        <p>Paragraph first</p>
+        <li>NOT yellow (not first child)</li>
+        <li>Normal</li>
+    </ul>
+    
+    <h3>Using :first-of-type</h3>
+    <ul class="demo2">
+        <li>Blue (first li type)</li>
+        <li>Normal</li>
+        <li>Normal</li>
+    </ul>
+    
+    <ul class="demo2">
+        <p>Paragraph first</p>
+        <li>Blue (first li type, ignores p)</li>
+        <li>Normal</li>
+    </ul>
+</body>
+</html>
+```
+
+### Example 3: Only-child vs Only-of-type
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Only child - must be the ONLY child */
+        .demo1 li:only-child {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        
+        /* Only of type - only one of its type */
+        .demo2 li:only-of-type {
+            background-color: lightblue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h3>Using :only-child</h3>
+    <ul class="demo1">
+        <li>Yellow (only child)</li>
+    </ul>
+    
+    <ul class="demo1">
+        <p>Paragraph</p>
+        <li>NOT yellow (has sibling)</li>
+    </ul>
+    
+    <h3>Using :only-of-type</h3>
+    <ul class="demo2">
+        <li>Blue (only li)</li>
+    </ul>
+    
+    <ul class="demo2">
+        <p>Paragraph 1</p>
+        <li>Blue (only li type, p doesn't count)</li>
+        <p>Paragraph 2</p>
+    </ul>
+    
+    <ul class="demo2">
+        <li>NOT blue</li>
+        <li>Multiple li elements</li>
+    </ul>
+</body>
+</html>
+```
+
+### Example 4: Alternating Row Colors (Table/List)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Odd rows - white */
+        li:nth-child(odd) {
+            background-color: white;
+        }
+        
+        /* Even rows - gray */
+        li:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+        
+        /* First item special */
+        li:first-child {
+            font-weight: bold;
+            border-top: 2px solid #333;
+        }
+        
+        /* Last item special */
+        li:last-child {
+            border-bottom: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1 (white, bold, top border)</li>
+        <li>Item 2 (gray)</li>
+        <li>Item 3 (white)</li>
+        <li>Item 4 (gray)</li>
+        <li>Item 5 (white)</li>
+        <li>Item 6 (gray, bottom border)</li>
+    </ul>
+</body>
+</html>
+```
+
+### Example 5: Complex nth-child Formulas with Lists
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            padding: 10px;
+            margin: 5px 0;
+        }
+        
+        /* Every 3rd item starting from 1st: 3n+1 (1, 4, 7, 10...) */
+        li:nth-child(3n+1) {
+            background-color: lightcoral;
+        }
+        
+        /* Every 3rd item starting from 2nd: 3n+2 (2, 5, 8, 11...) */
+        li:nth-child(3n+2) {
+            background-color: lightblue;
+        }
+        
+        /* Every 3rd item: 3n (3, 6, 9, 12...) */
+        li:nth-child(3n) {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1 (coral - 3n+1)</li>
+        <li>Item 2 (blue - 3n+2)</li>
+        <li>Item 3 (green - 3n)</li>
+        <li>Item 4 (coral - 3n+1)</li>
+        <li>Item 5 (blue - 3n+2)</li>
+        <li>Item 6 (green - 3n)</li>
+        <li>Item 7 (coral - 3n+1)</li>
+        <li>Item 8 (blue - 3n+2)</li>
+        <li>Item 9 (green - 3n)</li>
+    </ul>
+</body>
+</html>
+```
+
+### Example 6: Combining Multiple Pseudo-Classes
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* All list items */
+        li {
+            padding: 8px;
+            margin: 3px 0;
+            border-left: 3px solid transparent;
+        }
+        
+        /* First item of each list */
+        li:first-of-type {
+            border-left-color: green;
+        }
+        
+        /* Last item of each list */
+        li:last-of-type {
+            border-left-color: red;
+        }
+        
+        /* Hover effect on all except first and last */
+        li:not(:first-of-type):not(:last-of-type):hover {
+            background-color: lightyellow;
+            cursor: pointer;
+        }
+        
+        /* Even items (except first and last) */
+        li:nth-of-type(even):not(:first-of-type):not(:last-of-type) {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h3>Ordered List</h3>
+    <ol>
+        <li>First item (green border)</li>
+        <li>Second item (gray, hover effect)</li>
+        <li>Third item (hover effect)</li>
+        <li>Fourth item (gray, hover effect)</li>
+        <li>Last item (red border)</li>
+    </ol>
+    
+    <h3>Unordered List</h3>
+    <ul>
+        <li>First item (green border)</li>
+        <li>Second item (gray, hover effect)</li>
+        <li>Third item (hover effect)</li>
+        <li>Last item (red border)</li>
+    </ul>
+</body>
+</html>
+```
+
+---
+
 ## Comparison Table: :child vs :of-type
 
 | Selector | Counts | Example Use |
@@ -1795,6 +2122,7 @@ p {
 | **:nth-last-of-type** | `:nth-last-of-type(n)` | `p:nth-last-of-type(2) { }` | Position from end (same type) |
 | **:only-child** | `:only-child` | `p:only-child { }` | Only child of parent |
 | **:only-of-type** | `:only-of-type` | `p:only-of-type { }` | Only one of its type |
+| **:not()** | `:not(selector)` | `p:not(.class) { }` | Elements NOT matching selector |
 | **::before** | `::before` | `h2::before { }` | Insert before |
 | **::after** | `::after` | `h2::after { }` | Insert after |
 | **::first-letter** | `::first-letter` | `p::first-letter { }` | First letter |
