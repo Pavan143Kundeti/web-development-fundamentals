@@ -75,6 +75,9 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 #### Phase 8: Routing
 - **08_routing_complete_guide.md** - React Router introduction, installation, BrowserRouter setup, basic routing (Link, Routes, Route), creating views, nested routes, Outlet component, NavLink for active styling, URL parameters, useParams hook, multiple parameters, common routing patterns
 
+#### Phase 9: Styling
+- **09_styling_complete_guide.md** - Styling methods in React, inline styling with JavaScript objects, camelCase property names, style objects, CSS stylesheets, importing CSS files, className usage, CSS Modules, scoped styles, combining classes, conditional styling, best practices
+
 ## 🎯 Learning Objectives
 
 By completing this course, you will:
