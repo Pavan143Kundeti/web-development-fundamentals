@@ -18,6 +18,7 @@ A comprehensive web development course covering HTML, CSS, and JavaScript from b
 - **01_css_introduction_three_ways.md** - Introduction to CSS and three ways to apply styles (inline, internal, external)
 - **02_css_selectors_complete_guide.md** - Complete guide to all CSS selectors: simple, combinator, pseudo-class, pseudo-element, and attribute selectors
 - **03_css_box_model_complete_guide.md** - Complete guide to CSS Box Model: content, padding, border, margin, and box-sizing
+- **04_css_positioning_units_guide.md** - Complete guide to CSS units (px, %, em, rem, vw, vh) and positioning (static, relative, absolute, fixed, sticky)
 
 ### JavaScript Folder  
 *Coming soon - JavaScript programming and interactivity*
